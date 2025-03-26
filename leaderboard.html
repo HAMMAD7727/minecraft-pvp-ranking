@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Minecraft PvP</title>
+    <link rel="stylesheet" href="../css/leaderboard.css">
+</head>
+<body>
+    <header>
+        <h1>🏆 Minecraft PvP Leaderboards</h1>
+    </header>
+
+    <section class="leaderboard-container">
+        <div class="leaderboard">
+            <h2 onclick="toggleTable('nethPotTable')">NethPot Leaderboard ⬇️</h2>
+            <table id="nethPotTable" class="hidden">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Tier</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="leaderboard">
+            <h2 onclick="toggleTable('diamondPotTable')">DiamondPot Leaderboard ⬇️</h2>
+            <table id="diamondPotTable" class="hidden">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Tier</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="leaderboard">
+            <h2 onclick="toggleTable('axeShieldTable')">Axe & Shield Leaderboard ⬇️</h2>
+            <table id="axeShieldTable" class="hidden">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Tier</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="leaderboard">
+            <h2 onclick="toggleTable('smpKitTable')">SMP Kit Leaderboard ⬇️</h2>
+            <table id="smpKitTable" class="hidden">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Tier</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+
+    <script type="module" src="../js/leaderboard.js"></script>
+</body>
+</html>

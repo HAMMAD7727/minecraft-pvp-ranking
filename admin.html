@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Minecraft PvP</title>
+    <link rel="stylesheet" href="../css/admin.css">  <!-- ✅ Ensure correct CSS path -->
+</head>
+<body>
+    <header>
+        <h1>⚙️ Admin Panel - Manage Players</h1>
+    </header>
+
+    <section class="admin-section">
+        <h2>➕ Add New Player</h2>
+        <form id="addPlayerForm">
+            <label for="playerNameInput">Enter Player Name:</label>
+            <input type="text" id="playerNameInput" placeholder="Player Name" required>
+
+            <label for="playerGameMode">Select Game Mode:</label>
+            <select id="playerGameMode">  
+                <option value="NethPot">NethPot</option>
+                <option value="DiamondPot">DiamondPot</option>
+                <option value="AxeShield">Axe & Shield</option>
+                <option value="SMPKit">SMP Kit</option>
+            </select>
+
+            <label for="playerTier">Select Tier:</label>
+            <select id="playerTier">
+                <option value="HT1">HT1</option>
+                <option value="HT2">HT2</option>
+                <option value="HT3">HT3</option>
+                <option value="HT4">HT4</option>
+                <option value="HT5">HT5</option>
+                <option value="LT1">LT1</option>
+                <option value="LT2">LT2</option>
+                <option value="LT3">LT3</option>
+                <option value="LT4">LT4</option>
+                <option value="LT5">LT5</option>
+            </select>
+
+            <button type="submit">✅ Add Player</button>
+        </form>
+    </section>
+
+    <script type="module" src="../js/admin.js"></script>
+    <script type="module">
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
+        import { app } from "../firebase.js";
+    
+        const auth = getAuth(app);
+    
+        onAuthStateChanged(auth, (user) => {
+            if (!user || user.email !== "your-email@gmail.com") {
+                alert("❌ Access Denied! Only admins can view this page.");
+                window.location.href = "../index.html"; // Redirect to homepage
+            }
+        });
+    </script>
+    
+</body>
+</html>

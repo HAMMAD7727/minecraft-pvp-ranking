@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Profile - Minecraft PvP</title>
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <header>
+        <h1>🔍 Search for a Player</h1>
+        <input type="text" id="searchPlayer" placeholder="Enter player name..." onkeyup="searchPlayer()">
+    </header>
+
+    <section class="profile-container" id="profileSection" style="display: none;">
+        <div class="profile-header">
+            <img id="playerAvatar" src="../assets/default-avatar.png" alt="Player Avatar">
+            <h2 id="playerName">Loading...</h2>
+            <p id="playerOverallRank">#Overall Rank: Loading...</p>
+        </div>
+
+        <div class="profile-stats">
+            <h3>🏆 Game Mode Tiers</h3>
+            <div class="tiers">
+                <div class="tier-box"><strong>NethPot:</strong> <span id="nethPotTier">Loading...</span></div>
+                <div class="tier-box"><strong>DiamondPot:</strong> <span id="diamondPotTier">Loading...</span></div>
+                <div class="tier-box"><strong>Axe & Shield:</strong> <span id="axeShieldTier">Loading...</span></div>
+                <div class="tier-box"><strong>SMP Kit:</strong> <span id="smpKitTier">Loading...</span></div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="../js/profile.js"></script>
+</body>
+</html>

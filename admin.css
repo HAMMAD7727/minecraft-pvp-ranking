@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: #1e1e1e;
+    padding: 20px;
+}
+
+.admin-section {
+    margin: 20px auto;
+    width: 50%;
+    background: #292929;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form, input, select, button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff4500;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ff5733;
+}
